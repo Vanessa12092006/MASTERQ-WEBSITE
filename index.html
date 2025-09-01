@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASTERQ Bistrița</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #006400;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .lang-switch {
+      cursor: pointer;
+      background: #fff;
+      color: #006400;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #006400;
+    }
+    h3 {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      color: #444;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 40px;
+    }
+    footer {
+      background: #006400;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      background: #006400;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #228B22;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Sigla_MASTERQ BISTRITA.png" alt="Logo MASTERQ Bistrița">
+    <nav>
+      <a href="#about" data-key="menu_about">Despre noi</a>
+      <a href="#services" data-key="menu_services">Servicii</a>
+      <a href="#contact" data-key="menu_contact">Contact</a>
+      <button class="lang-switch" onclick="switchLang()">EN</button>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2 data-key="about_title">Despre noi</h2>
+    <p data-key="about_text">
+      Suntem specializați în sisteme de management al calității și management operațional. Vă ajutăm să vă îmbunătățiți performanța afacerii, să vă optimizați procesele de inginerie și să vă dezvoltați abilitățile și competențele. Folosim concepte avansate, modele dovedite și metode eficiente pentru a oferi rezultate de înaltă calitate și valoare.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2 data-key="services_title">Serviciile noastre</h2>
+    <h3 data-key="services_quality">Managementul Calității</h3>
+    <ul>
+      <li data-key="service_q1">Implementare și audit sisteme de management al calității (ISO 9001, IATF 16949)</li>
+      <li data-key="service_q2">Cerințe specifice clienți</li>
+      <li data-key="service_q3">Core Tools: Control Plan, DFMEA, PFMEA, tehnici de rezolvare a problemelor</li>
+    </ul>
+    <h3 data-key="services_engineering">Procese de Inginerie End-to-End</h3>
+    <ul>
+      <li data-key="service_e1">RFQ (Request for Quotation)</li>
+      <li data-key="service_e2">Industrializare</li>
+      <li data-key="service_e3">Management de proiect</li>
+      <li data-key="service_e4">Design</li>
+      <li data-key="service_e5">Workplace design</li>
+      <li data-key="service_e6">Împărțirea muncii</li>
+      <li data-key="service_e7">Design pentru manufacturabilitate (DfM)</li>
+      <li data-key="service_e8">Timp standard</li>
+      <li data-key="service_e9">Instrucțiuni standard de lucru</li>
+    </ul>
+    <h3 data-key="services_performance">Managementul Performanței</h3>
+    <ul>
+      <li data-key="service_p1">Definirea regulilor pentru KPI</li>
+      <li data-key="service_p2">Vizualizarea și monitorizarea KPI</li>
+      <li data-key="service_p3">Definirea KPI standard la nivel de fabrică și subdepartamente</li>
+      <li data-key="service_p4">Cascadarea obiectivelor</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2 data-key="contact_title">Contact</h2>
+    <p><strong data-key="contact_person">Persoană de contact:</strong> Laurentiu Trif</p>
+    <p><strong data-key="phone_label">Telefon:</strong> 0040 755 115 499</p>
+    <p><strong>Email:</strong> contact@masterq.ro | trif_laurentiu@yahoo.com</p>
+    <p><strong data-key="address_label">Adresă:</strong> Bistrița, România</p>
+
+    <form action="mailto:trif_laurentiu@yahoo.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Nume" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="5" placeholder="Mesaj" required></textarea>
+      <button type="submit">Trimite</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MASTERQ Bistrița</p>
+  </footer>
+
+  <script>
+    const translations = {
+      ro: {
+        menu_about: "Despre noi",
+        menu_services: "Servicii",
+        menu_contact: "Contact",
+        about_title: "Despre noi",
+        about_text: "Suntem specializați în sisteme de management al calității și management operațional. Vă ajutăm să vă îmbunătățiți performanța afacerii, să vă optimizați procesele de inginerie și să vă dezvoltați abilitățile și competențele. Folosim concepte avansate, modele dovedite și metode eficiente pentru a oferi rezultate de înaltă calitate și valoare.",
+        services_title: "Serviciile noastre",
+        services_quality: "Managementul Calității",
+        service_q1: "Implementare și audit sisteme de management al calității (ISO 9001, IATF 16949)",
+        service_q2: "Cerințe specifice clienți",
+        service_q3: "Core Tools: Control Plan, DFMEA, PFMEA, tehnici de rezolvare a problemelor",
+        services_engineering: "Procese de Inginerie End-to-End",
+        service_e1: "RFQ (Request for Quotation)",
+        service_e2: "Industrializare",
+        service_e3: "Management de proiect",
+        service_e4: "Design",
+        service_e5: "Workplace design",
+        service_e6: "Împărțirea muncii",
+        service_e7: "Design pentru manufacturabilitate (DfM)",
+        service_e8: "Timp standard",
+        service_e9: "Instrucțiuni standard de lucru",
+        services_performance: "Managementul Performanței",
+        service_p1: "Definirea regulilor pentru KPI",
+        service_p2: "Vizualizarea și monitorizarea KPI",
+        service_p3: "Definirea KPI standard la nivel de fabrică și subdepartamente",
+        service_p4: "Cascadarea obiectivelor",
+        contact_title: "Contact",
+        contact_person: "Persoană de contact:",
+        phone_label: "Telefon:",
+        address_label: "Adresă:"
+      },
+      en: {
+        menu_about: "About us",
+        menu_services: "Services",
+        menu_contact: "Contact",
+        about_title: "About us",
+        about_text: "We are specialized in quality management systems and operations management. We help you improve your business performance, optimize your engineering processes, and enhance your skills and competencies. We use advanced concepts, proven models, and effective methods to deliver high-quality results and value.",
+        services_title: "Our Services",
+        services_quality: "Quality Management",
+        service_q1: "Implementation and audit of Quality Management Systems (ISO 9001, IATF 16949)",
+        service_q2: "Customer Specific Requirements",
+        service_q3: "Core Tools: Control Plan, DFMEA, PFMEA, problem solving techniques",
+        services_engineering: "End-to-End Engineering Processes",
+        service_e1: "RFQ (Request for Quotation)",
+        service_e2: "Industrialization",
+        service_e3: "Project Management",
+        service_e4: "Design",
+        service_e5: "Workplace design",
+        service_e6: "Work division",
+        service_e7: "Design for manufacturing (DfM)",
+        service_e8: "Standard Time",
+        service_e9: "Standard Work Instruction",
+        services_performance: "Performance Management",
+        service_p1: "Define rules for KPI definition",
+        service_p2: "KPI visualization and tracking",
+        service_p3: "Define standard KPI for plant and departments",
+        service_p4: "Cascading down targets",
+        contact_title: "Contact",
+        contact_person: "Contact person:",
+        phone_label: "Phone:",
+        address_label: "Address:"
+      }
+    };
+
+    let currentLang = 'ro';
+
+    function switchLang() {
+      currentLang = currentLang === 'ro' ? 'en' : 'ro';
+      document.querySelector('.lang-switch').textContent = currentLang === 'ro' ? 'EN' : 'RO';
+      document.querySelectorAll('[data-key]').forEach(el => {
+        el.textContent = translations[currentLang][el.getAttribute('data-key')];
+      });
+    }
+  </script>
+</body>
+</html>
